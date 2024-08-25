@@ -10,3 +10,5 @@ gem 'rubocop-rspec', require: false
 gem 'sorbet'
 gem 'sorbet-runtime'
 gem 'tapioca', require: false
+
+gem 'rspec', require: false
