@@ -15,6 +15,7 @@ on:
 defaults:
   run:
     shell: bash
+    working-directory: ruby
 
 env:
   TZ: Asia/Tokyo
@@ -29,14 +30,15 @@ jobs:
     runs-on: ubuntu-24.04
     timeout-minutes: 10
     steps:
+      - name: $ git clone する
+        uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4.1.7
       - name: （デバッグ用）Payload ($GITHUB_EVENT_PATH) を確認する
         run: |
           cat $GITHUB_EVENT_PATH
-      - name: $ git clone する
-        uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4.1.7
       - name: Ruby のセットアップを行う
         uses: ruby/setup-ruby@a6e6f86333f0a2523ece813039b8b4be04560854 # v1.190.0
         with:
+          working-directory: ruby # ruby/setup-ruby 側 でも指定する必要がある
           ruby-version: .ruby-version
           bundler-cache: true
       - name: RuboCop を実行する
@@ -44,4 +46,4 @@ jobs:
           bundle exec rubocop
       - name: スクリプトを実行する
         run: |
-          bundle exec ruby ruby/sorbet/sample.rb
+          bundle exec ruby sorbet_sample/app.rb
