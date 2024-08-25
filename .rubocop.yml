@@ -42,12 +42,3 @@ Style/StringLiteralsInInterpolation:
   EnforcedStyle: single_quotes
 Style/TrailingCommaInArrayLiteral:
   EnforcedStyleForMultiline: comma
-
-RSpec/ExampleLength:
-  Max: 45
-RSpec/FilePath:
-  Enabled: false
-RSpec/MultipleExpectations:
-  Max: 5
-RSpec/SpecFilePathFormat:
-  Enabled: false
