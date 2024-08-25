@@ -46,9 +46,9 @@ Style/TrailingCommaInArrayLiteral:
 
 RSpec/ExampleLength:
   Max: 45
-RSpec/FilePath:
-  Enabled: false
 RSpec/MultipleExpectations:
   Max: 5
 RSpec/SpecFilePathFormat:
+  Enabled: false
+RSpec/SpecFilePathSuffix:
   Enabled: false
