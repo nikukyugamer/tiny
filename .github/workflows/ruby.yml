@@ -15,7 +15,7 @@ on:
 defaults:
   run:
     shell: bash
-    working-directory: ruby
+    # working-directory: ruby
 
 env:
   TZ: Asia/Tokyo
@@ -30,6 +30,9 @@ jobs:
     runs-on: ubuntu-24.04
     timeout-minutes: 10
     steps:
+      - name: デバッグ用
+        run: |
+          ls -la
       - name: （デバッグ用）Payload ($GITHUB_EVENT_PATH) を確認する
         run: |
           cat $GITHUB_EVENT_PATH
