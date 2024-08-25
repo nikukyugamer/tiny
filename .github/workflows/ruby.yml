@@ -35,6 +35,10 @@ jobs:
       - name: （デバッグ用）Payload ($GITHUB_EVENT_PATH) を確認する
         run: |
           cat $GITHUB_EVENT_PATH
+      - name: デバッグ
+        run: |
+          pwd
+          ls -la
       - name: Ruby のセットアップを行う
         uses: ruby/setup-ruby@a6e6f86333f0a2523ece813039b8b4be04560854 # v1.190.0
         with:
