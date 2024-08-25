@@ -1,6 +1,7 @@
 require:
   - rubocop-performance
   - rubocop-rake
+  - rubocop-rspec
 
 inherit_mode:
   merge:
@@ -42,3 +43,12 @@ Style/StringLiteralsInInterpolation:
   EnforcedStyle: single_quotes
 Style/TrailingCommaInArrayLiteral:
   EnforcedStyleForMultiline: comma
+
+RSpec/ExampleLength:
+  Max: 45
+RSpec/FilePath:
+  Enabled: false
+RSpec/MultipleExpectations:
+  Max: 5
+RSpec/SpecFilePathFormat:
+  Enabled: false
