@@ -15,7 +15,7 @@ on:
 defaults:
   run:
     shell: bash
-    # working-directory: ruby
+    working-directory: ruby
 
 env:
   TZ: Asia/Tokyo
@@ -30,14 +30,11 @@ jobs:
     runs-on: ubuntu-24.04
     timeout-minutes: 10
     steps:
-      - name: デバッグ用
-        run: |
-          ls -la
+      - name: $ git clone する
+        uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4.1.7
       - name: （デバッグ用）Payload ($GITHUB_EVENT_PATH) を確認する
         run: |
           cat $GITHUB_EVENT_PATH
-      - name: $ git clone する
-        uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4.1.7
       - name: Ruby のセットアップを行う
         uses: ruby/setup-ruby@a6e6f86333f0a2523ece813039b8b4be04560854 # v1.190.0
         with:
