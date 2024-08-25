@@ -38,7 +38,7 @@ jobs:
       - name: Ruby のセットアップを行う
         uses: ruby/setup-ruby@a6e6f86333f0a2523ece813039b8b4be04560854 # v1.190.0
         with:
-          ruby-version: ./ruby/.ruby-version # プロジェクトルートからの相対パス
+          ruby-version: .ruby-version
           bundler-cache: true
       - name: RuboCop を実行する
         run: |
