@@ -2,7 +2,7 @@
 
 require 'sorbet-runtime'
 
-class Sample
+class App
   extend T::Sig
 
   sig { params(first: Integer, second: Integer).returns(Integer) }
@@ -11,7 +11,7 @@ class Sample
   end
 end
 
-result_one = Sample.new.sum(1, 3)
+result_one = App.new.sum(1, 3)
 puts "result_one: #{result_one}"
 
 # Type Error

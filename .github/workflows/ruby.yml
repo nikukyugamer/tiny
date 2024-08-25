@@ -46,4 +46,4 @@ jobs:
           bundle exec rubocop
       - name: スクリプトを実行する
         run: |
-          bundle exec ruby ruby/sorbeter/sample.rb
+          bundle exec ruby sorbet_sample/app.rb
