@@ -5,7 +5,7 @@ require 'sorbet-runtime'
 class Sample
   extend T::Sig
 
-  sig { params(a: Integer, b: Integer).returns(Integer) }
+  sig { params(first: Integer, second: Integer).returns(Integer) }
   def sum(first, second)
     first + second
   end
