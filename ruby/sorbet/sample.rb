@@ -11,7 +11,7 @@ class Sample
   end
 end
 
-result_one = sum(1, 3)
+result_one = Sample.new.sum(1, 3)
 puts "result_one: #{result_one}"
 
 # Type Error
