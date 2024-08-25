@@ -1,16 +1,19 @@
 # typed: true
+
 require 'sorbet-runtime'
 
-extend T::Sig
+class Sample
+  extend T::Sig
 
-sig {params(a: Integer, b: Integer).returns(Integer)}
-def sum(a, b)
-  a + b
+  sig { params(a: Integer, b: Integer).returns(Integer) }
+  def sum(first, second)
+    first + second
+  end
 end
 
-result_1 = sum(1, 3)
-puts "result_1: #{result_1}"
+result_one = sum(1, 3)
+puts "result_one: #{result_one}"
 
 # Type Error
-# result_2 = sum('Hello, ', 'World!')
-# puts "result_2: #{result_2}"
+# result_two = sum('Hello, ', 'World!')
+# puts "result_two: #{result_two}"
