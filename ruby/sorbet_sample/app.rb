@@ -15,5 +15,5 @@ result_one = App.new.sum(1, 3)
 puts "result_one: #{result_one}"
 
 # Type Error
-# result_two = sum('Hello, ', 'World!')
+# result_two = App.new.sum('Hello, ', 'World!')
 # puts "result_two: #{result_two}"
