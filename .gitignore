@@ -8,3 +8,6 @@
 
 # Ruby
 sorbet/rbi/hidden-definitions/errors.txt
+
+# Rust
+rust/**/target/
