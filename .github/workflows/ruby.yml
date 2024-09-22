@@ -36,7 +36,7 @@ jobs:
         run: |
           cat $GITHUB_EVENT_PATH
       - name: Ruby のセットアップを行う
-        uses: ruby/setup-ruby@52753b7da854d5c07df37391a986c76ab4615999 # v1.191.0
+        uses: ruby/setup-ruby@f321cf5a4d1533575411f8752cf25b86478b0442 # v1.193.0
         with:
           working-directory: ruby # ruby/setup-ruby 側 でも指定する必要がある
           ruby-version: .ruby-version
